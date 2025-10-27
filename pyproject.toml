@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "power"
+version = "0.9"
+description = "An exponentiation Python package."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name="Sebastian Gössl", email="goessl@student.tugraz.at"}
+]
+license = {file="LICENSE"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12", #math.sumprod
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/goessl/power"
+
+[tool.hatch.build.targets.wheel]
+packages = ["power"]
+
+[tool.hatch.build.targets.sdist]
+include = ["power.py", "README.md", "LICENSE"]
